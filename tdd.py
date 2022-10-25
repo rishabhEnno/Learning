@@ -21,4 +21,4 @@ class TestSomething:
 
     def test_answer_exception(self):
         with pytest.raises(ZeroDivisionError):
-            self.func_excep()
+            self.func_zero_division_error()
