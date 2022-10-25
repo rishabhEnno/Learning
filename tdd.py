@@ -22,3 +22,7 @@ class TestSomething:
     def test_answer_exception(self):
         with pytest.raises(ZeroDivisionError):
             self.func_zero_division_error()
+    
+    @pytest.mark.parametrize("test_input, expected", [(50,51), (54,55)])
+    def test_max_space_wardrobe_50(self, test_input, expected):
+        assert self.func(test_input) == expected
