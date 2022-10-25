@@ -23,6 +23,20 @@ def func_wardrobe():
         out.append(a+b+c)
     return out
 
+def return_cheapest():
+    options = func_wardrobe()
+    prices = {50: 59, 75: 62, 100: 90, 120: 111}
+    cheapest_price = 500
+    cheapest_option = None
+    for i in options:
+        price = 0
+        for element in i:
+            price = price + prices[element]
+        if price < cheapest_price:
+            cheapest_price = price
+            cheapest_option = i
+    return cheapest_option, cheapest_price
 
 if __name__ == "__main__":
     print(func_wardrobe())
+    print(return_cheapest())
