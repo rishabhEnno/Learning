@@ -37,6 +37,16 @@ def return_cheapest():
             cheapest_option = i
     return cheapest_option, cheapest_price
 
-if __name__ == "__main__":
-    print(func_wardrobe())
-    print(return_cheapest())
+
+def fizzbuzz(n):
+    if n%15 == 0:
+        return "FizzBuzz"
+    if n%3 == 0:
+        return "Fizz"
+    if n%5 == 0:
+        return "Buzz"
+    return n
+
+# if __name__ == "__main__":
+#     print(func_wardrobe())
+#     print(return_cheapest())

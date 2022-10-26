@@ -1,6 +1,6 @@
 
 import pytest
-from kata import func_wardrobe, return_cheapest
+from kata import func_wardrobe, return_cheapest, fizzbuzz
 
 
 class TestWardrobe:
@@ -21,3 +21,20 @@ class TestWardrobe:
         out = return_cheapest()
         assert out[1] == 214
         assert out[0] == [75, 75, 100]
+
+
+class TestFizzBuzz:
+
+    def test_fizz(self):
+        assert fizzbuzz(3) == "Fizz"
+    
+    def test_buzz(self):
+        assert fizzbuzz(5) == "Buzz"
+    
+    def test_fizzbuzz(self):
+        assert fizzbuzz(3*5) == "FizzBuzz"
+    
+    @pytest.mark.parametrize("other", [1, 4, 7])
+    def test_other(self, other):
+        assert fizzbuzz(other) == other
+    
